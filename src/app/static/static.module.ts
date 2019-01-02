@@ -10,6 +10,9 @@ import {BrowserModule} from "@angular/platform-browser";
   ],
   declarations: [
     NavbarComponent
+  ],
+  exports : [
+    NavbarComponent
   ]
 })
 export class StaticModule {

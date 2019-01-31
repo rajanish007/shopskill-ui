@@ -1,0 +1,12 @@
+.login-window {
+  width: 50%;
+  margin-top: 20%;
+  margin-left: 25%;
+  padding: 20px;
+  border-style: groove;
+  border-radius: 4px;
+}
+
+a{
+  font-size: 13px;
+}

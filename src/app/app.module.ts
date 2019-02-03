@@ -16,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     GenericModule,
     StaticModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [RouterModule],
   bootstrap: [AppComponent],

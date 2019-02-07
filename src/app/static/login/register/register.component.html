@@ -1,25 +1,31 @@
 <div class="container">
   <div class="register-window">
-    <form>
-      <div class="form-group">
-        <label for="inputUserName">Username</label>
-        <input type="text" class="form-control" id="inputUserName" placeholder="Enter Username">
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <app-identifier label="Username"
+                      placeholder="Enter Username"
+                      [controlName]="usernameControl"
+                      helpText="minimum = 6, maximum = 20"
+                      [required]="true">
+      </app-identifier>
+      <app-identifier label="Email Address"
+                      placeholder="Enter email"
+                      [controlName]="emailControl"
+                      [required]="true"
+                      helpText="We'll never share your email with anyone else.">
+      </app-identifier>
+      <app-password label="Password"
+                    placeholder="Enter Password"
+                    [controlName]="passwordControl"
+                    helpText="minimum = 6, maximum = 14">
+      </app-password>
+      <app-password label="Confirm Password"
+                    placeholder="Re-Enter Password"
+                    [controlName]="passwordMatchControl">
+      </app-password>
+      <div *ngIf="passwordMatchFlag"
+           class="alert alert-danger">Password Not Matching.
       </div>
-      <div class="form-group">
-        <label for="inputEmail">Email address</label>
-        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
-               placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="inputPassword">Password</label>
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-      </div>
-      <div class="form-group">
-        <label for="inputConfirmPassword">Password</label>
-        <input type="text" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
-      </div>
-      <button type="button" class="btn btn-lg btn-block btn-outline-success">Submit</button>
+      <button type="submit" class="btn btn-lg btn-block btn-outline-success">Submit</button>
     </form>
   </div>
 </div>

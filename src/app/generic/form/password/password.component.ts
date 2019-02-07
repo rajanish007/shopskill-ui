@@ -9,11 +9,15 @@ import {FormControl} from "@angular/forms";
 })
 export class PasswordComponent {
 
+  @Input() label: string;
+
   @Input() placeholder: string;
 
   @Input() controlName: FormControl;
 
   @Input() required: boolean = true;
+
+  @Input() helpText: string = undefined;
 
   constructor() {
   }

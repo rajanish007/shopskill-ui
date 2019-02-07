@@ -8,9 +8,13 @@ import {FormControl} from "@angular/forms";
 })
 export class IdentifierComponent {
 
+  @Input() label : string;
+
   @Input() placeholder: string;
 
   @Input() controlName: FormControl;
+
+  @Input() helpText : string = undefined;
 
   @Input() required: boolean = true;
 

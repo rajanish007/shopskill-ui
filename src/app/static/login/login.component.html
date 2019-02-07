@@ -1,11 +1,15 @@
 <div class="container">
   <div class="login-window">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <app-identifier [controlName]="userIdControl"
-                      placeholder="Enter username or email">
+      <app-identifier label="Login ID"
+                      [controlName]="userIdControl"
+                      placeholder="Enter userId or email"
+                      [required]="true">
       </app-identifier>
       <app-password [controlName]="passwordControl"
-                    placeholder="Password">
+                    placeholder="Password"
+                    label="Password"
+                    [required]="true">
       </app-password>
       <a routerLink="/register">Not a Member, Register !</a><br>
       <a href="#" style="color: gray">Continue as Guest !</a>

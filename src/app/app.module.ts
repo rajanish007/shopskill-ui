@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {GenericModule} from "./generic/generic.module";
 import {StaticModule} from "./static/static.module";
 import {RouterModule} from "@angular/router";
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [

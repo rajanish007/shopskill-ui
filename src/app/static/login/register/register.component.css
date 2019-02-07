@@ -6,3 +6,7 @@
   border-style: groove;
   border-radius: 4px;
 }
+
+.alert{
+  padding: 0.30rem 1rem;
+}
